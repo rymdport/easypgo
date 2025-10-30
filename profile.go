@@ -25,13 +25,13 @@ func Generate() func() {
 		pprof.StopCPUProfile()
 		defer src.Close()
 
-		dst, err = os.Create("default.pgo")
+		dst, err := os.Create("default.pgo")
 		if err != nil {
 			log.Fatalln("Could create default.pgo: ", err)
 		}
 
 		defer dst.Close()
-		err = io.Copy(dst, src)
+		_, err = io.Copy(dst, src)
 		if err != nil {
 			log.Fatalln("Could not copy CPU profile to default.pgo: ", err)
 		}
