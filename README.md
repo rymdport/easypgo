@@ -10,3 +10,7 @@ func main() {
 	defer stop()
 }
 ```
+
+When running the binary, a profile will be generated for the duration of the program's execution.
+Once completed, a `default.pgo` file will be generated in the current working directory.
+Do a rebuild without the `profile` for Go to automatically apply the profile to the binary.
