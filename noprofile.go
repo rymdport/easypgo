@@ -1,6 +1,6 @@
 //go:build !profile
 
-// Package profile provides tooling to easily do profiling.
+// Package easypgo provides tooling to automatically generate a CPU profile for PGO builds.
 package easypgo
 
 // Generate starts a CPU profile and returns a function to stop it.

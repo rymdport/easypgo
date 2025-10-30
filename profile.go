@@ -1,5 +1,6 @@
 //go:build profile
 
+// Package easypgo provides tooling to automatically generate a CPU profile for PGO builds.
 package easypgo
 
 import (
